@@ -1,0 +1,15 @@
+
+div {
+    width: 500px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: blueviolet;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.assign-1-shape-2 {
+    background-color: rgb(138 43 226 / 50%);
+}
+.assign-1-shape-3 {
+    background-color: rgb(138 43 226 / 10%);
+}
