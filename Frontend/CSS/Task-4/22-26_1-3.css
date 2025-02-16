@@ -1,0 +1,46 @@
+/* assi 1 */
+.parent {
+    border: 2px solid orange;
+    padding: 15px;
+    margin: 10px;
+}
+.child {
+    border: 2px solid;
+    border-color: inherit;
+    padding: inherit;
+    background-color: #eee;
+    text-align: center;
+}
+.parent-2 {
+    border: 2px solid green;
+    padding: 15px;
+    margin: 10px;
+}
+.child-2 {
+    border: 2px solid;
+    border-color: inherit;
+    padding: inherit;
+    background-color: #eee;
+    text-align: center;
+}
+/* assi 2 */
+.one {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+.two {
+    font-family: 'Cairo', sans-serif;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+.three {
+    font-family: 'Jomhuria', cursive;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+/* assi 3 */
+:root {
+    font-size: 20px;
+}
