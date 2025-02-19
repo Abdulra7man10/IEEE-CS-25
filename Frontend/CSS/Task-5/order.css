@@ -1,0 +1,154 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Center the card in the viewport */
+body {
+    background: url('media/images/pattern-background-desktop.svg') no-repeat top center;
+    background-size: cover;
+    background-color: hsl(225, 38%, 67%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@media (max-width: 768px) {
+    body {
+        background: url('media/images/pattern-background-mobile.svg') no-repeat;
+        background-size: cover;
+        background-color: hsl(225, 38%, 67%);
+    }
+}
+
+
+/* Main card container */
+.card {
+    background: white;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Header image */
+.card img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Card content */
+.card-content {
+    padding: 20px;
+}
+
+/* Title */
+.card-content h2 {
+    font-size: 22px;
+    color: hsl(223, 47%, 23%);
+    margin-bottom: 10px;
+}
+
+/* Description */
+.card-content p {
+    font-size: 14px;
+    color: hsl(224, 23%, 55%);
+    margin-bottom: 20px;
+}
+
+/* Plan section */
+.plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: hsl(225, 100%, 98%);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-content .plan-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.plan-details {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-details strong {
+    font-size: 14px;
+    color: hsl(223, 47%, 23%);
+    margin: 8px 0px;
+}
+
+.plan-details p {
+    font-size: 13px;
+    color: hsl(224, 23%, 55%);
+}
+
+.plan a {
+    font-size: 13px;
+    color: hsl(245, 75%, 52%);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.plan a:hover {
+    color: hsl(245, 81%, 62%);
+    text-decoration: none;
+}
+
+/* Buttons */
+.button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* Proceed to Payment button */
+.btn-primary {
+    background: hsl(245, 75%, 52%);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: hsl(245, 81%, 62%);
+}
+
+/* Cancel Order link */
+.cancel {
+    display: block;
+    margin-top: 15px;
+    color: hsl(224, 23%, 55%);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.cancel:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+/* Footer Attribution */
+.attribution {
+    margin-top: 20px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

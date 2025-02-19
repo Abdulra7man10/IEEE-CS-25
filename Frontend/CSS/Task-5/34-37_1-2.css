@@ -1,0 +1,65 @@
+
+/* assi 3 */
+.data {
+    background-color: #eee;
+    width: 350px;
+    padding: 15px;
+    margin: 10px 10px 10px 139px;
+    border-left: 4px solid #b30000;
+    position: relative;
+}
+.data::before {
+    content: attr(data-person);
+    position: absolute;
+    margin: 10px;
+    background-color: #eee;
+    text-align: center;
+    padding: 15px;
+    right: 397px;
+    top: -9px;
+    width: 52px;
+}
+.data::after{
+    content: "";
+    width: 0px;
+    height: 0px;
+    background-color: white;
+    position: absolute;
+    margin-top: -9px;
+    left: -24px;
+    top: 48%;
+    border: 10px solid;
+    border-color: transparent #b30000 transparent transparent;
+}
+
+/* assi 4 */
+.long {
+    background-color: #eee;
+    width: 350px;
+    padding: 15px;
+    margin: 15px 50px;
+    position: relative;
+    counter-increment: count;
+}
+.long::before {
+    content: counter(count);
+    background-color: red;
+    color: white;
+    height: 100%;
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: -29px;
+}
+.long::after {
+    content: "";
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    right: 0px;
+    top: 0px;
+}

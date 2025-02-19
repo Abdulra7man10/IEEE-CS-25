@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+/* assi 1 */
+.shadow {
+    background-color: #eee;
+    color: #ff6c00;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: -10px 0 0 0 #0093e6, 10px 0 0 0 #ff6c00;
+    font-size: 16px;
+}
+
+/* assi 5 */
+.parent-4 {
+    background-color: #eee;
+    width: 600px;
+    height: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+}
+.parent-4 div {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 25%;
+    height: 50%;
+}
+.one-4 {
+    background-color: #ffa500;
+    order: 2;
+    margin: 0 60px;
+}
+.two-4 {
+    background-color: #6bb34d;
+    order: 3;
+    align-self: flex-end;
+}
+.three-4 {
+    background-color: #844b2e;
+    order: 4;
+    margin-left: 60px;
+}
+.four-4 {
+    background-color: #7849cd;
+    order: 1;
+    align-self: flex-end;
+}
+
+/* assi 6  */
+:root {
+    --maincolor: #ddd;
+    --mainpadding: 10px;
+    --mainmarin: 10px;
+}
+.page {
+    background-color: #eee;
+    margin: var(--mainmarin);
+    padding: var(--mainpadding);
+}
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+.logo {
+    background-color: var(--maincolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 10%;
+    height: 30px;
+    padding: var(--mainpadding);
+}
+.links {
+    background-color: var(--maincolor);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 90%;
+    height: 30px;
+    list-style: none;
+    margin-left: var(--mainmarin);
+    padding: var(--mainpadding);
+}
+.links li {
+    margin-left: var(--mainmarin);
+}
+
+.main-area {
+    display: flex;
+}
+.content {
+    background-color: var(--maincolor);
+    display: flex;
+    flex-basis: 65%;
+    margin-right: var(--mainmarin);
+    padding: var(--mainpadding);
+    height: 365px;
+}
+.sidebar {
+    background-color: var(--maincolor);
+    display: flex;
+    flex-basis: 35%;  
+    padding: var(--mainpadding);
+    height: 365px;
+}
+
+.footer {
+    display: flex;
+    margin-top: var(--mainmarin);
+}
+.copyright, .design {
+    background-color: var(--maincolor);
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+    height: 30px;
+    padding: var(--mainpadding);
+}
+.design {
+    justify-content: flex-end;
+}
