@@ -22,8 +22,8 @@ using namespace std;
 
 int main()
 {
-    char x[] = "hello";
-    sort(x, x+5);
-    cout << x << endl;
+    int a = 5;
+    int b = ++a + a++ + --a;
+    cout << b << endl;
     return 0;
 }
