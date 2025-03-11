@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1
+        console.log(10 * 20 + 15 % 3 + 190 + 10 - 400); // 0
+        
+        // 2
+        let num = 3;
+
+        // Solution One: Multiplication
+        console.log(num * true + num); // 6
+
+        // Solution Two: Addition with Boolean
+        console.log(num + num); // 6
+
+        // Solution Three: Addition with Multiplication with Boolean
+        console.log(num + 3 * true); // 6 
+
+        // Solution Four: Increment Operator
+        console.log(++num + --num - true); // 6
+
+        // Solution Five: Multiplication with number
+        console.log(num * 2); // 6
+
+        // Solution Six: Multiplication with number and subtraction
+        console.log(num * num - num); // 6
+
+        // 3
+        let n = "10";
+
+        // Solution One
+        console.log(+n + 10); // 20
+
+        // Solution Two
+        console.log(-n + 30); // 20
+
+        // Solution Three
+        console.log(n * 2); // 20
+
+        // Solution Four
+        console.log(Number(n) * 2); // 20
+        
+        // 4
+        let points = 10;
+
+        // Write Your Code Here
+
+        console.log(points + true + true + true); // 13
+
+        // Write Your Code Here
+
+        console.log(points - true - true); // 8;
+    </script>
+</body>
+</html>

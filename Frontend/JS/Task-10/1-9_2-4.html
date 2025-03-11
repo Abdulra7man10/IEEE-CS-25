@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+      // 2
+      document.write("<h1>Elzero</h1>");
+      
+      // 3
+      console.log("%cElzero %cWeb %cSchool", "color: red; font-size: 40px", "color: green; font-size: 40px; font-weight: bold", "background-color: blue; color: white; font-size: 40px");
+      
+      // 4
+      console.group("Group 1");
+      console.log("Message One");
+      console.log("Message Two");
+      console.group("Child Group");
+      console.log("Message One");
+      console.log("Message Two");
+      console.group("Grand Child Group");
+      console.log("Message One");
+      console.log("Message Two");
+      console.groupEnd();
+      console.groupEnd();
+      console.groupEnd();
+      console.group("Group 2");
+      console.log("Message One");
+      console.log("Message Two");
+      console.groupEnd();
+    </script>
+
+    // 2
+    <style>
+      h1 {
+        color: blue;
+        font-size: 80px;
+        font-weight: bold;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+  </body>
+</html>

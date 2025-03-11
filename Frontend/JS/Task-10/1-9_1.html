@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+      // Code One: This will not work, this id not exist yet
+      document.getElementById("el").style.color = "blue";
+    </script>
+    <script>
+      // Code Two: this will work, this works after all page loaded
+      window.onload = function () {
+        document.getElementById("el").style.color = "green";
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="el">Page Title</h1>
+    <script>
+      // Code Three: This will not work, because onload function override it
+      document.getElementById("el").style.color = "red";
+    </script>
+  </body>
+</html>

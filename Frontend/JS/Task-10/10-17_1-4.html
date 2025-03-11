@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="elzero">object</div>
+    <script>
+        // 1
+        // Add Variables Here
+        let n1 = 10, 
+            n2 = 20;
+
+        // Ouput
+        console.log(n1 + "" + n2); // Normal Concatenate => 1020
+        console.log(typeof(n1 + "" + n2)); // Normal Concatenate => String
+        console.log(`${n1}${n2}`); // Template Literals Way => 1020
+        console.log(typeof `${n1}${n2}`); // Template Literals Way => String
+
+        console.log("20\n10");
+        console.log(`20
+10`);
+
+        // 2
+        console.log(elzero.innerHTML); // object
+        console.log(typeof elzero); // object
+
+        // 3
+        console.log("`I'm In\n\\\nLove \\ \"\"\" \'\'\'\n++ With ++\n\\\"\"\"\\\"\"\"\n\"\"JavaScript\"\"``");
+    
+        // 4
+        let a = 21;
+        let b = 20;
+        console.log(`_${a}_${b}${a}_${b}${a}_${b}${a}_${b}_`); // _21_2021_2021_2021_20_
+    </script>
+</body>
+</html>
