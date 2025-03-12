@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* assi 1 */
+@media print {
+    .assign-one {
+        font-size: 40px;
+    }    
+}
+
+/* assi 2 */
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+}
+.parent > div {
+    padding: 7px;
+    background-color: #ddd;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.parent > div > span:first-child {
+    color: black;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 5px;
+}
+.parent > div > span:last-child {
+    margin: 0 auto;
+    font-size: 7px;
+    padding: 5px;
+}
+/* Mobile */
+@media (max-width: 567px) {
+
+}
+/* Medium screen */
+@media (min-width: 800px) {
+    .parent > div {
+        width: calc( 50% - 20px);
+    }
+    .parent > div > span:first-child {
+        color: red;
+    }
+}
+/* Large screen */
+@media (min-width: 1000px) {
+    .parent > div {
+        width: calc( 25% - 20px);
+    }
+    .parent > div > span:first-child {
+        color: #009688;
+    }
+}
+
+/* assi 3 */
+.parent-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+}
+.parent-3 > div {
+    padding: 7px;
+    background-color: #ddd;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.parent-3 > div > span:first-child {
+    color: black;
+    margin: 0 auto;
+    font-size: 14px;
+    padding: 5px;
+}
+.parent-3 > div > span:last-child {
+    margin: 0 auto;
+    font-size: 7px;
+    padding: 5px;
+}
+/* Mobile */
+@media (max-width: 567px) {
+
+}
+/* Medium screen */
+@media (min-width: 800px) {
+    .parent-3 > div {
+        width: calc( 33.33% - 20px);
+    }
+    .parent-3 > div:first-child {
+        width: calc( 100% - 20px);
+    }
+    .parent-3 > div > span:first-child {
+        color: red;
+    }
+}
+/* Large screen */
+@media (min-width: 1000px) {
+    .parent-3 > div {
+        width: calc( 50% - 20px);
+    }
+    .parent-3 > div:first-child, .parent-3 > div:last-child {
+        width: calc( 100% - 20px);
+    }
+    .parent-3 > div > span:first-child {
+        color: #009688;
+    }
+}
+@media print {
+    .parent-3 > div {
+        width: calc( 50% - 20px);
+    }
+    .parent-3 > div:first-child, .parent-3 > div:last-child {
+        width: calc( 100% - 20px);
+    }
+    .parent-3 > div > span:first-child {
+        color: #009688;
+    }
+}

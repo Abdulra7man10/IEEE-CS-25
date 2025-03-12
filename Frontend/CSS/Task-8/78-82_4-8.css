@@ -1,0 +1,26 @@
+
+
+/* assi 4 */
+.a-4 > div:nth-child(n+4):nth-child(-n+6){
+    color: red;
+}
+
+/* assi 5 */
+.a-5 > div:nth-child(2) div[title] {
+    color: red;
+} 
+
+/* assi 6 */
+.a-6 > div:nth-child(-n+2) div:nth-last-of-type(2) {
+    color: red;
+}
+
+/* assi 7 */
+.a-7 > div:first-child div:nth-child(5) {
+    color: red;
+}
+
+/* assi 8 */
+.a-8 > div :nth-child(n+2):nth-child(-n+5):not(:nth-child(4)) {
+    color: red;
+}

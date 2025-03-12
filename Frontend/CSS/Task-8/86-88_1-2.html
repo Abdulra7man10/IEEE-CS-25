@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* assi 1 */
+        .center-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center-position {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+        .circle-100 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .circle-200 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        * {
+        margin: 0;
+        }
+        /* assi 2 */
+        .arrow {
+            width: 415px;
+            height: 60px;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ddd;
+            margin: 20px auto;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .arrow::before {
+            content: "";
+            position: absolute;
+            border: 15px solid;
+        }
+        .top::before {
+            border-color: transparent transparent #ddd transparent;
+            left: calc( 50% - 15px);
+            bottom: 100%;
+        }
+        .right::before {
+            border-color: transparent transparent transparent #ddd;
+            left: 100%;
+            top: calc( 50% - 15px);
+        }
+        .bottom::before {
+            border-color: #ddd transparent transparent transparent;
+            left: calc( 50% - 15px);
+            top: 100%;
+        }
+        .left::before {
+            border-color: transparent #ddd transparent transparent;
+            right: 100%;
+            top: calc( 50% - 15px);
+        }
+        /* بتنقص على قد البوردر */
+    </style>
+</head>
+
+<body>
+    <!-- assi 1 -->
+
+    <!-- assi 2 -->
+    <div class="arrow top">Elzero</div>
+    <div class="arrow right">Elzero</div>
+    <div class="arrow bottom">Elzero</div>
+    <div class="arrow left">Elzero</div>
+</body>
+
+</html>
