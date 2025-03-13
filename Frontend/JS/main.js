@@ -1,35 +1,22 @@
 /*
-  Challenge 1
+  String Challenge
+  All Solutions Must Be In One Chain
+  You Can Use Concatenate
 */
 
-let a = 10;
-let b = "20";
-let c = 80;
+let a = "Elzero Web School";
 
-console.log(++a + +b++ + +c++ - +a++); // 11 + 20 + 80 - 11 = 100
-console.log(++a + -b + +c++ - -a++ + +a); // 13 - 21 + 81 + 13 + 14 = 86
-console.log(--c + +b + --a * +b++ - +b * a + --a - +true); // 81 + 21 + 13 * 21 - 22 * 13 + 12 - 1 = 100
+// Include This Method In Your Solution [slice, charAt]
+console.log(a.charAt(2).toUpperCase() + a.slice(3, 6)); // Zero
 
-/*
-  [++a] [+]
-  [++a]
-  - Value:
-  - Explain:
-  [+]
-  - Explain:
-*/
+// 8 H
+console.log("H".repeat(8)); // HHHHHHHH
 
-/*
-  Challenge 2
-*/
+// Return Array
+console.log(a.slice(0,6).split("")); // ["Elzero"]
 
-let d = "-100";
-let e = "20";
-let f = 30;
-let g = true;
+// Use Only "substr" Method + Template Literals In Your Solution
+console.log(a.substr(0, 6) + ` ` + a.substr(11, 6)); // Elzero School
 
-// Only Use Variables Value
-// Do Not Use Variable Twice
-
-console.log(-d * +e); // 2000
-console.log(-d + f + 2 * +e + +g*3); // 173
+// Solution Must Be Dynamic Because String May Changes
+console.log(a[0].toLowerCase() + a.slice(1).toUpperCase()); // eLZERO WEB SCHOOl
