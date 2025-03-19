@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1
+        // Test Case 1
+        let num1 = 9; // "009"
+        num1 = num1 < 10 ? "00" + num1 : num1 < 100 ? "0" + num1 : num1;
+
+        // Test Case 2
+        let num2 = 20; // "020"
+        num2 = num2 < 10 ? "00" + num2 : num2 < 100 ? "0" + num2 : num2;
+
+        // Test Case 3
+        let num3 = 110; // "110"
+        num3 = num3 < 10 ? "00" + num3 : num3 < 100 ? "0" + num3 : num3;
+
+        // 2
+        let num = 9;
+        let str = "9";
+        let str2 = "20";
+
+        // Output
+        console.log(num == str);  // "{num1} Is The Same Value As {str}"
+        console.log(num === str);  // "{num1} Is The Same Value As {str} But Not The Same Type"
+        console.log(num == str2 || typeof num === typeof str2);  // "{num1} Is Not The Same Value Or The Same Type As {str2}"
+        console.log(str === str2);  // "{str} Is The Same Type As {str2} But Not The Same Value"
+
+        // 3
+        let n1 = 10;
+        let n2 = 30;
+        let n3 = "30";
+
+        // Needed Output
+        console.log(n2 > n1 && typeof n3 !== typeof n2);  // "30 Is Larger Than 10 And Type string Not The Same Type As number"
+        console.log(n2 > n1 && n3 == n2 && typeof n3 !== typeof n2);  // "30 Is Larger Than 10 And Value Is The Same As 30 And Type string Not The Same Type As number"
+        console.log(n2 === n1 && typeof n3 !== typeof n2);  // "{num3} Value And Type Is Not The Same As {num1} And Type Is Not The Same As {num2}"
+
+        // 4
+        // Edit What You Want Here
+
+        let nu1 = 21;
+        let nu2 = 10;
+        let nu3 = 21;
+        let nu4 = 53;
+
+        /*
+        Do Not Edit Below This Line
+        Needed Output
+        True 7 Times
+        */
+
+        // Condition 1
+
+        if (nu1 > nu2) {
+        console.log("True");
+        } else {
+        console.log("False");
+        }
+
+        // Condition 2
+
+        if (nu1 > nu2 && nu1 < nu4) {
+        console.log("True");
+        } else {
+        console.log("False");
+        }
+
+        // Condition 3
+
+        if (nu1 > nu2 && nu1 === nu3) {
+        console.log("True");
+        } else {
+        console.log("False");
+        }
+
+        // Condition 4
+
+        if ((nu1 + nu2) < nu4) {
+        console.log("True");
+        } else {
+        console.log("False");
+        }
+
+        // Condition 5
+
+        if ((nu1 + nu3) < nu4) {
+        console.log("True");
+        } else {
+        console.log("False");
+        }
+
+        // Condition 6
+
+        if ((nu1 + nu2 + nu3) < nu4) {
+        console.log("True");
+        } else {
+        console.log("False");
+        }
+
+        // Condition 7
+
+        if (nu4 - (nu1 + nu3) + nu2 === 21) {
+        console.log("True");
+        } else {
+        console.log("False");
+        }
+    </script>
+</body>
+</html>
