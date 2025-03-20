@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // 1
+    let start = 10;
+    let end = 100;
+    let exclude = 40;
+    for (let i=start; i<=end; i+=10) 
+    {
+        if (i === exclude) continue;
+        console.log(i);
+    }
+    /* 
+    Output
+    10
+    20
+    30
+    50
+    60
+    70
+    80
+    90
+    100
+    */
+    console.log("\n--------------------\n");
+    // 2
+    let s1 = 10;
+    let e1 = 0;
+    let stop = 3;
+    for (let i = s1; i > e1; s1--) 
+    {
+        console.log(s1.toString().padStart(2, "0"));
+        if (s1 === stop) break;
+    }
+/*
+Output
+10
+09
+08
+07
+06
+05
+04
+03
+*/
+console.log("\n--------------------\n");
+    // 3
+    let s2= 1;
+    let e2 = 6;
+    let breaker = 2;
+    for (let i=s2; i<= e2; i++)
+    {
+        console.log(i);
+        for (let j=2; j<=4; j+=2)
+            console.log(`-- ${j}`);
+    }
+/*
+ Output
+1
+-- 2
+-- 4
+2
+-- 2
+-- 4
+3
+-- 2
+-- 4
+4
+-- 2
+-- 4
+5
+-- 2
+-- 4
+6
+-- 2
+-- 4
+*/
+console.log("\n--------------------\n");
+    // 4
+    let index = 10;
+    let jump = 2;
+    
+    for (;;) {
+        console.log(index);
+        index -= jump;
+        if (index < 4) break;
+    }
+    
+    /*
+    Output
+    10
+    8
+    6
+    4
+    */
+    console.log("\n--------------------\n");
+    // 5
+    let friends = ["Ahmed", "Sayed", "Eman", "Mahmoud", "Ameer", "Osama", "Sameh"];
+    let letter = "a";
+
+    let c = 1;
+    for (let i=0; i<friends.length; i++)
+    {
+        if (friends[i][0] !== letter.toUpperCase())
+            console.log(`${c++} => ${friends[i]}`);
+    }
+    
+    /* Output
+    "1 => Sayed"
+    "2 => Eman"
+    "3 => Mahmoud"
+    "4 => Osama"
+    "5 => Sameh"
+    */
+
+    console.log("\n--------------------\n");
+
+    // 6
+    let s3 = 0;
+    let swappedName = "elZerO";
+    let newS = "";
+    for (let i=s3; i<swappedName.length; i++)
+    {
+        if (swappedName[i].toUpperCase() === swappedName[i])
+            newS += swappedName[i].toLowerCase();
+        else
+            newS += swappedName[i].toUpperCase();
+    }
+    console.log(newS);
+    
+    // Output
+    "ELzERo"
+
+    console.log("\n--------------------\n");
+    
+    // 7
+    let s4 = 0;
+    let mix = [1, 2, 3, "A", "B", "C", 4];
+
+    for (let i=s4+1; i<mix.length; i++)
+    {
+        if (typeof mix[i] === typeof 1)
+            console.log(mix[i]);
+    }
+    
+    /* Output
+    2
+    3
+    4*/
+</script>
+</body>
+</html>
