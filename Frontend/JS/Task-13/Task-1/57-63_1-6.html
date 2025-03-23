@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // 1
+    function sayHello(theName, theGender) {
+        theGender = theGender === "Male" ? " Mr " : theGender === "Female" ? " Miss " : " ";
+        console.log(`Hello${theGender}${theName}`);
+      }
+      
+      // Needed Output
+      sayHello("Osama", "Male"); // "Hello Mr Osama"
+      sayHello("Eman", "Female"); // "Hello Miss Eman"
+      sayHello("Sameh"); // "Hello Sameh" 
+
+      console.log("==============================================");
+      // 2
+      function calculate(firstNum, secondNum, operation = "add") {
+        if (secondNum === undefined) {
+            console.log("Second Number Not Found");
+            return;
+        }
+
+        switch (operation) {
+            case "add":
+                console.log(firstNum + secondNum);
+                break;
+            case "subtract":
+                console.log(firstNum - secondNum);
+                break;
+            case "multiply":
+                console.log(firstNum * secondNum);
+                break;
+        }
+        return;
+      }
+      
+      // Needed Output
+      calculate(20); // Second Number Not Found
+      calculate(20, 30); // 50
+      calculate(20, 30, 'add'); // 50
+      calculate(20, 30, 'subtract'); // -10
+      calculate(20, 30, 'multiply'); // 600
+
+      console.log("==============================================");
+      // 3
+      function ageInTime(theAge) {
+        if (theAge < 10 || theAge > 100) {
+            console.log("Age Out Of Range");
+            return;
+        }
+        let Months = theAge * 12;
+        let Weeks = theAge * 52;
+        let Days = theAge * 365;
+        let Hours = Days * 24;
+        let Minutes = Hours * 60;
+        let Seconds = Minutes * 60;
+        console.log(`${Months} Months, ${Weeks} Weeks, ${Days} Days, ${Hours} Hours, ${Minutes} Minutes, ${Seconds} Seconds`);
+      }
+      
+      // Needed Output
+      ageInTime(110); // Age Out Of Range
+      ageInTime(38); // Months Example => 456 Months
+
+    console.log("==============================================");
+    // 4
+    function showDetails(a, b, c) {
+        var name, age, status;
+        name = typeof a === "string" ? a : typeof b === "string" ? b : c;
+        age = typeof a === "number" ? a : typeof b === "number" ? b : c;
+        status = typeof a === "boolean" ? a : typeof b === "boolean" ? b : c;
+        console.log(`Hello ${name}, Your Age Is ${age}, You Are ${status ? "Available" : "Not Available"} For Hire`);
+        return;
+      }
+      
+      showDetails("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+      showDetails(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+      showDetails(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+      showDetails(false, "Osama", 38); // "Hello Osama, Your Age Is 38, You Are Not Available For Hire"
+
+    console.log("==============================================");
+    // 5
+    function createSelectBox(startYear, endYear) {
+        document.write("<select>");
+        for (let i = startYear; i <= endYear; i++) {
+            document.write(`<option value="${i}">${i}</option>`);
+        }
+        document.write("</select>");
+      }
+      createSelectBox(2000, 2021);
+
+    console.log("==============================================");
+    // 6
+    function multiply(...numbers) {
+        let result = 1;
+        for (let i = 0; i < numbers.length; i++) {
+            let num = numbers[i];
+            if (typeof num !== "number") {
+                continue;
+            }
+            result *= num % 1 !== 0 ? Math.trunc(num) : num;
+        }
+        console.log(result);
+        return;
+      }
+
+    multiply(10, 20); // 200
+    multiply("A", 10.3, 30); // 300
+    multiply(100.5, 10, "B"); // 1000
+</script>
+</body>
+</html>
