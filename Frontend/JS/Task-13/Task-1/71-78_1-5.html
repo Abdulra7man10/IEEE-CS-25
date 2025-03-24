@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // 1
+    let mix = [1, 2, 3, "E", 4, "l", "z", "e", "r", 5, "o"];
+
+    let letters = mix
+    .map((element) => isNaN(element) ? element : "")
+    .reduce((acc, element) => `${acc}${element}`);
+    console.log(letters); // Elzero
+
+    // 2
+    let myString = "EElllzzzzzzzeroo";
+
+    let unique = myString
+    .split("")
+    .filter((element, index, array) => array[index] !== array[index + 1])
+    .join("");
+    console.log(unique); // Elzero
+
+    // 3
+    let myArray = ["E", "l", "z", ["e", "r"], "o"];
+
+    let solution = myArray
+    .reduce((acc, element) => acc.concat(element), [])
+    .reduce((acc, element) => `${acc}${element}`);
+    console.log(solution); // Elzero
+
+    // 4
+    let numsAndStrings = [1, 10, -10, -20, 5, "A", 3, "B", "C"];
+    
+    let result = '[' + numsAndStrings
+    .filter((ele) => !isNaN(ele))
+    .map((ele) => -ele)
+    .join(", ") + ']';
+    console.log(result); // [-1, -10, 10, 20, -5, -3]
+
+    // 5
+    let nums = [2, 12, 11, 5, 10, 1, 99];
+
+    let all = nums
+    .reduce((acc, ele) => (ele % 2 === 1 ? acc + ele : acc * ele), 1);
+    console.log(all); // 500
+</script>
+</body>
+</html>
