@@ -1,13 +1,18 @@
 
-let user = {
-  name: "Abdo",
-  age: 20,
+for (let i=1; i<=100; i++) {
+  let myMainElement = document.createElement("div");
+  let myHeader = document.createElement("h2");
+  let myParagraph = document.createElement("p");
 
-  sayHello: function () {
-    console.log("Hello " + this.name);
-  },
+  let myHeaderText = document.createTextNode(`Product Title ${i}`);
+  let myParagraphText = document.createTextNode("Product Description");
+
+  myHeader.appendChild(myHeaderText);
+  myMainElement.appendChild(myHeader);
+
+  myParagraph.appendChild(myParagraphText);
+  myMainElement.appendChild(myParagraph);
+
+  myMainElement.className = "product";
+  document.body.appendChild(myMainElement);
 }
-
-console.log(user.name);
-console.log(user.age);
-user.sayHello();
