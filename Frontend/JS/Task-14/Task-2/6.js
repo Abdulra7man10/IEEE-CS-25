@@ -1,0 +1,3 @@
+function consecutiveSum(n) {
+	
+}
