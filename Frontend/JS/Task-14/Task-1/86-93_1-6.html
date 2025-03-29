@@ -51,6 +51,18 @@
 <img decoding="async" src="#" alt="Three" />
 <img decoding="async" src="#" />
 <img decoding="async" src="#" />
+
+<form action="">
+  <input type="number" name="elements" class="input" placeholder="Number Of Elements" />
+  <input type="text" name="texts" class="input" placeholder="Elements Text" />
+  <select name="type" class="input">
+    <option value="Div">Div</option>
+    <option value="Section">Section</option>
+  </select>
+  <input type="submit" name="create" value="Create" />
+  <div class="results"></div>
+</form>
+
 <script>
   // 1
   console.log(document.querySelector("#elzero"));
@@ -107,7 +119,23 @@
   }
 
   // 6
-  
+  let numberElements = document.querySelector("input[name='elements']");
+  let textElement = document.querySelector("input[name='texts']").value;
+  let typeElement = document.querySelector("select[name='type']");
+
+  document.querySelector("input[name='create']").onclick = function (e) {
+    e.preventDefault();
+    let number = parseInt(numberElements.value);
+    let text = textElement.value;
+    let type = typeElement.value;
+    let resultsDiv = document.querySelector(".results");
+    resultsDiv.innerHTML = ""; 
+    for (let i = 0; i<number; i++) {
+      let newElement = document.createElement(type);
+      newElement.innerText = text + " " + (i + 1);
+      resultsDiv.appendChild(newElement);
+    }
+  };
 </script>
 </body>
 </html>
