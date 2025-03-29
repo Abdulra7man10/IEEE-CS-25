@@ -42,6 +42,15 @@
     <input type="number" name="dollar" placeholder="USD Dollar" />
     <div class="result">{0} USD Dollar = {0} Egyptian Pound</div>
   </form>
+
+  <div class="one" title="two">Two</div>
+  <div class="two" title="one">One</div>
+
+  <img decoding="async" src="#" alt="One" />
+<img decoding="async" src="#" />
+<img decoding="async" src="#" alt="Three" />
+<img decoding="async" src="#" />
+<img decoding="async" src="#" />
 <script>
   // 1
   console.log(document.querySelector("#elzero"));
@@ -58,14 +67,47 @@
   console.log(document.getElementsByName("js")[0]);
 
   // 2
-  let images = document.querySelectorAll("img");
+  let images = document.querySelectorAll("div img");
   for (let i = 0; i < images.length; i++) {
     images[i].src = "https://elzero.org/wp-content/themes/elzero/imgs/logo.png";
     images[i].alt = "Elzero Logo";
   }
 
   // 3
+  let input = document.querySelector("input[name='dollar']");
+  let resultDiv = document.querySelector(".result");
+  const exchangeRate = 15.6; // USD to EGP exchange rate
 
+  function convertCurrency() {
+    let dollarValue = parseFloat(input.value);
+    if (!isNaN(dollarValue)) {
+      let egyptianPound = (dollarValue * exchangeRate).toFixed(2); 
+      resultDiv.innerHTML = `${dollarValue} USD Dollar = ${egyptianPound} Egyptian Pound`;
+    } 
+    else {
+      resultDiv.innerHTML = `{0} USD Dollar = {0} Egyptian Pound`;
+    }
+  }
+  input.setAttribute("oninput", "convertCurrency()");
+
+  // 4
+  document.querySelector(".one").setAttribute("title", "one");
+  let oneDiv = document.querySelector(".one").innerText;
+  document.querySelector(".two").setAttribute("title", "two");
+  document.querySelector(".one").innerText = document.querySelector(".two").innerText;
+  document.querySelector(".two").innerText = oneDiv + " 2";
+
+  // 5
+  let imgs = document.querySelectorAll("img");
+  for (let i=0; i<imgs.length; i++) {
+    if (imgs[i].hasAttribute("alt"))
+      imgs[i].setAttribute("alt", "Old");
+    else
+      imgs[i].setAttribute("alt", "Elzero New");
+  }
+
+  // 6
+  
 </script>
 </body>
 </html>
