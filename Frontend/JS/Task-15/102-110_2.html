@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Popup Example</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 2px solid #000;
+      padding: 20px;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .popup button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  function createPopup() {
+    let popup = document.createElement("div");
+    popup.classList.add("popup");
+
+    let h4 = document.createElement("h4");
+    h4.textContent = "Welcome";
+    let p = document.createElement("p");
+    p.textContent = "Welcome to Elzero Web School";
+    let closeButton = document.createElement("button");
+    closeButton.textContent = "Close";
+
+    closeButton.onclick = function () {
+      popup.remove();
+    };
+
+    popup.appendChild(h4);
+    popup.appendChild(p);
+    popup.appendChild(closeButton);
+    document.body.appendChild(popup);
+  }
+
+  window.onload = function () {
+    setTimeout(createPopup, 1000);
+  };
+</script>
+
+</body>
+</html>
