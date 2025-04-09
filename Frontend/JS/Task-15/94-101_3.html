@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="our-element">Our Element</div>
+  <p>Paragraph</p>
+
+  <script>
+    document.querySelector("p").remove();
+    let ourElement = document.querySelector(".our-element");
+    
+    let start = document.createElement("div");
+    start.className = "start";
+    start.innerHTML = "Start";
+    start.title = "Start Element";
+    start.setAttribute("data-value", "Start");
+
+    let end = document.createElement("div");
+    end.className = "end";
+    end.innerHTML = "End";
+    end.title = "End Element";
+    end.setAttribute("data-value", "End");
+
+    ourElement.before(start);
+    ourElement.after(end);
+  </script>
+</body>
+</html>
