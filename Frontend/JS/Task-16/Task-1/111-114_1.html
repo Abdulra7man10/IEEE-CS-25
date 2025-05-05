@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A1</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Cairo&family=Roboto&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    select {
+      margin: 10px;
+      padding: 5px;
+    }
+
+    label {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <label for="fontSelect">Font:</label>
+    <select id="fontSelect">
+      <option value="Open Sans">Open Sans</option>
+      <option value="Cairo">Cairo</option>
+      <option value="Roboto">Roboto</option>
+    </select>
+
+    <label for="colorSelect">Color:</label>
+    <select id="colorSelect">
+      <option value="black">Black</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="purple">Purple</option>
+      <option value="orange">Orange</option>
+    </select>
+
+    <label for="sizeSelect">Font Size:</label>
+    <select id="sizeSelect">
+      <script>
+        for (let i = 16; i <= 30; i++) {
+          document.write(`<option value="${i}">${i}px</option>`);
+        }
+      </script>
+    </select>
+  </div>
+
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem fugiat esse dolorum ex possimus nisi aut saepe in, non ipsum.
+  </p>
+
+  <script>
+    const fontSelect = document.getElementById("fontSelect");
+    const colorSelect = document.getElementById("colorSelect");
+    const sizeSelect = document.getElementById("sizeSelect");
+
+    fontSelect.addEventListener("change", () => {
+      // apply
+      document.body.style.fontFamily = fontSelect.value;
+
+      // save local
+      localStorage.setItem("font", fontSelect.value);
+    });
+
+    colorSelect.addEventListener("change", () => {
+      document.body.style.color = colorSelect.value;
+      localStorage.setItem("color", colorSelect.value);
+    });
+
+    sizeSelect.addEventListener("change", () => {
+      document.body.style.fontSize = sizeSelect.value + "px";
+      localStorage.setItem("size", sizeSelect.value);
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      fontSelect.value = localStorage.getItem("font") || "Open Sans";
+      colorSelect.value = localStorage.getItem("color") || "black";
+      sizeSelect.value = localStorage.getItem("size") || "16";
+
+      document.body.style.fontFamily = fontSelect.value;
+      document.body.style.color = colorSelect.value;
+      document.body.style.fontSize = sizeSelect.value + "px";
+    });
+  </script>
+
+</body>
+</html>

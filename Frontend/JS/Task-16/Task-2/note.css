@@ -1,0 +1,88 @@
+/* Body and General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eee;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container  */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #000;
+  font-size: 28px;
+}
+
+/* Input and Textarea */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Button Style */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #358438;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #59c75e;
+}
+
+/* Notes List Container */
+#notesList {
+  margin-top: 20px;
+}
+
+/* Individual Note Card */
+.note-card {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note-card h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+.note-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.note-card button {
+  padding: 5px 10px;
+  background-color: #fc4f42;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.note-card button:hover {
+  background-color: #e53935;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    form {
+      max-width: 400px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="userForm">
+    <label>
+      Name:
+      <input type="text" name="name" id="nameInput" />
+    </label>
+
+    <label>
+      Email:
+      <input type="email" name="email" id="emailInput" />
+    </label>
+
+    <label>
+      Favourite Type:
+      <select id="typeSelect">
+        <option value="Option1">Option 1</option>
+        <option value="Option2">Option 2</option>
+        <option value="Option3">Option 3</option>
+        <option value="Option4">Option 4</option>
+        <option value="Option5">Option 5</option>
+      </select>
+    </label>
+  </form>
+
+  <script>
+    const nameInput = document.getElementById('nameInput');
+    const emailInput = document.getElementById('emailInput');
+    const typeSelect = document.getElementById('typeSelect');
+    
+    window.addEventListener('DOMContentLoaded', () => {
+      nameInput.value = sessionStorage.getItem('name') || '';
+      emailInput.value = sessionStorage.getItem('email') || '';
+      typeSelect.value = sessionStorage.getItem('selectedType') || 'Option1';
+    });
+
+    nameInput.addEventListener('input', () => {
+      sessionStorage.setItem('name', nameInput.value);
+    });
+
+    emailInput.addEventListener('input', () => {
+      sessionStorage.setItem('email', emailInput.value);
+    });
+
+    typeSelect.addEventListener('change', () => {
+      sessionStorage.setItem('selectedType', typeSelect.value);
+    });
+  </script>
+
+</body>
+</html>
