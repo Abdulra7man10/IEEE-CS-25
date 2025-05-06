@@ -53,13 +53,13 @@
 
 
   // 6
-  //let chars = ["A", "B", "C", "D", "E", 10, 15, 6];
-  //chars.sort(); 
-  //let nonStringsCount = chars.filter(el => typeof el !== "string").length;
-  //chars.copyWithin(0, 0, chars.some(el => typeof el !== "string") ? chars.length - nonStringsCount : chars.length);
-  
-  //console.log(chars);
+  let chars = ["A", "B", "C", "D", "E", 10, 15, 6];
 
+  let letters = chars.filter((e) => typeof e !== "number");
+  let replaced = letters.slice(0, chars.filter((e) => typeof e === "number").length);
+
+  console.log([...replaced, ...letters]);
+  
   // Needed Output
   //['A', 'B', 'C', 'A', 'B', 'C', 'D', 'E']
 

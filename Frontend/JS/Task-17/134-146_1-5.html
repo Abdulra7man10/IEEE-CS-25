@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A 1 - 5</title>
+</head>
+<body>
+<script>
+  // 1
+  let ip = "2001:db8:3333:4444:5555:6666:7777:8888";
+  let ipReg = /^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$/;
+  console.log(ip.match(ipReg));  
+
+  // 2
+  let specialNames = "Os10O OsO Os100O Osa100O Os1000 Os100m";
+  let specialNamesReg = /Os\d*O/g;
+  console.log(specialNames.match(specialNamesReg));
+  // Output
+  // ['Os10O', 'OsO', 'Os100O']
+
+  // 3
+  let phone = "+(995)-123 (4567)";
+  let phoneReg = /\+\(\d{3}\)-\d{3}\s\(\d{4}\)/;
+  console.log(phone.match(phoneReg));
+
+  // 4
+  let re = /https?:\/\/(?:[-\w]+\.)?([-\w]+)\.\w+(?:\.\w+)?\/?.*/i;
+  /*
+  - start with http or https
+  - followed by ://
+  - (?:[-\w]+\.)? optional subdomain
+  - ([\w-]+) domain name
+  - . then top-level domain
+  - (?:\.\w+)? optional second-level domain
+  - /? optional path of website
+  - example: https://www.example.com.sa/path
+
+  */
+
+  // 5
+  let date1 = "25/10/1982";
+  let date2 = "25 - 10 - 1982";
+  let date3 = "25 10 1982";
+  let date4 = "25 10 82";
+  
+  let dre = /\d{1,2}(\/|\s|\s-\s)\d{1,2}(\/|\s|\s-\s)\d{1,4}/;
+  
+  console.log(date1.match(dre)); // "25/10/1982"
+  console.log(date2.match(dre)); // "25 - 10 - 1982"
+  console.log(date3.match(dre)); // "25 10 1982"
+  console.log(date4.match(dre)); // "25 10 82"
+</script>
+</body>
+</html>

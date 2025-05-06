@@ -1,20 +1,18 @@
 /*
-  Map And Set + What You Learn => Challenge
-  Requirements
-  - You Cant Use Numbers Or True Or False
-  - Don't Use Array Indexes
-  - You Cant Use Loop
-  - You Cant Use Any Higher Order Function
-  - Only One Line Solution Inside Console
-  - If You Use Length => Then Only Time Only
-  Hints
-  - You Can Use * Operator Only In Calculation
-  - Set
-  - Spread Operator
-  - Math Object Methods
+  Regular Expression
+  - Challenge
 */
 
-let n1 = [10, 30, 10, 20];
-let n2 = [30, 20, 10];
+let url1 = 'elzero.org';
+let url2 = 'http://elzero.org';
+let url3 = 'https://elzero.org';
+let url4 = 'https://www.elzero.org';
+let url5 = 'https://WWW.elzero.org:8080/articles.php?id=100&cat=topics';
 
-console.log(Math.max(...n2) * [...n1, ...n2].length); // 210
+let re = /(https?:\/\/)?(www.)?\w+.\w{1,}/i;
+
+console.log(url1.match(re));
+console.log(url2.match(re));
+console.log(url3.match(re));
+console.log(url4.match(re));
+console.log(url5.match(re));
