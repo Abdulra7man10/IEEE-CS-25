@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A1 to A8</title>
+</head>
+<body>
+<script>
+  // 1
+  let setOfNumbers = new Set([10]);
+  setOfNumbers.add(20).add(setOfNumbers.size);
+  console.log(setOfNumbers);
+
+  // 2
+  let myFriends = ["Osama", "Ahmed", "Sayed", "Sayed", "Mahmoud", "Osama"];
+  let uniqueFriends = [...new Set(myFriends)];
+  console.log(uniqueFriends.sort());
+  // Needed Output
+  //(4) ['Ahmed', 'Mahmoud', 'Osama', 'Sayed']
+
+  // 3
+  let myInfo = {
+    username: "Osama",
+    role: "Admin",
+    country: "Egypt",
+  };
+
+  let myMap = new Map(Object.entries(myInfo));
+  console.log(myMap);
+  console.log(myMap.size);
+  console.log(myMap.has("role"));
+  
+  // Needed Output
+  //Map(3) {'username' => 'Osama', 'role' => 'Admin', 'country' => 'Egypt'}
+  //3
+  //true
+
+  // 4
+  let theNumber = 100020003000;
+
+  console.log([...new Set([...theNumber.toString()].filter(d => d !== '0'))].join(''));
+  // Needed Output
+  //123
+
+  // 5
+  let theName = "Elzero";
+  console.log([...theName]);
+  console.log(Array.from(theName));
+  console.log(theName.split(""));
+  // Needed Output
+  //['E', 'l', 'z', 'e', 'r', 'o']
+
+
+  // 6
+  //let chars = ["A", "B", "C", "D", "E", 10, 15, 6];
+  //chars.sort(); 
+  //let nonStringsCount = chars.filter(el => typeof el !== "string").length;
+  //chars.copyWithin(0, 0, chars.some(el => typeof el !== "string") ? chars.length - nonStringsCount : chars.length);
+  
+  //console.log(chars);
+
+  // Needed Output
+  //['A', 'B', 'C', 'A', 'B', 'C', 'D', 'E']
+
+
+  // 7
+  let numsOne = [1, 2, 3];
+  let numsTwo = [4, 5, 6];
+  console.log(numsOne.concat(numsTwo));
+  console.log([...numsOne, ...numsTwo]);
+  numsOne.push(...numsTwo)
+  console.log(numsOne);
+  // Needed Output
+  //[1, 2, 3, 4, 5, 6]
+
+
+  // 8
+  let n1 = [10, 30, 10, 20];
+  let n2 = [30, 20, 10];
+  
+  console.log(Math.max(...n2) * [...n1, ...n2].length); // 210
+</script>
+</body>
+</html>

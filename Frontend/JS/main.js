@@ -1,19 +1,20 @@
-let chosen = 1;
+/*
+  Map And Set + What You Learn => Challenge
+  Requirements
+  - You Cant Use Numbers Or True Or False
+  - Don't Use Array Indexes
+  - You Cant Use Loop
+  - You Cant Use Any Higher Order Function
+  - Only One Line Solution Inside Console
+  - If You Use Length => Then Only Time Only
+  Hints
+  - You Can Use * Operator Only In Calculation
+  - Set
+  - Spread Operator
+  - Math Object Methods
+*/
 
-let myFriends = [
-  { title: "Osama", age: 39, available: true, skills: ["HTML", "CSS"] },
-  { title: "Ahmed", age: 25, available: false, skills: ["Python", "Django"] },
-  { title: "Sayed", age: 33, available: true, skills: ["PHP", "Laravel"] },
-];
+let n1 = [10, 30, 10, 20];
+let n2 = [30, 20, 10];
 
-let {
-  title,
-  age,
-  available,
-  skills: [firstSkill]
-} = myFriends[chosen - 1];
-
-console.log(title);
-console.log(age);
-console.log(available);
-console.log(firstSkill);
+console.log(Math.max(...n2) * [...n1, ...n2].length); // 210
