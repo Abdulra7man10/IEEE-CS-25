@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  // 1
+  class Car {
+    constructor(name, model, price) {
+      this.n = name;
+      this.m = model;
+      this.p = price;
+    }
+    run () {
+      return `Car is running now`;
+    }
+
+    stop () {
+      return `Car is stopped`;
+    }
+  }
+
+  let car1 = new Car("BMW", 2022, 100000);
+  let car2 = new Car("Mercedes", 2020, 80000);
+  let car3 = new Car("Audi", 2025, 90000);
+
+  console.log(`Car One Name Is ${car1.n} And Model Is ${car1.m} And Price Is ${car1.p}`);
+  console.log(car1.run());
+
+  // 2
+  class Phone {
+    constructor(name, serial, price) {
+      this.name = name;
+      this.serial = serial;
+      this.price = price;
+    }
+  }
+  
+  class Tablet extends Phone {
+    constructor(name, serial, price, size) {
+      super(name, serial, price);
+      this.size = size;
+    }
+    fullDetails() {
+      return `${this.name} Serial is ${this.serial} And Size Is ${this.size || "Unknown"}`;
+    }
+  }
+  
+  let TabletOne = new Tablet("iPad", 100200300, 1500, 12.9);
+  let TabletTwo = new Tablet("Nokia", 350450650, 800, 10.5);
+  let TabletThree = new Tablet("LG", 250450650, 650);
+  
+  console.log(`${TabletOne.fullDetails()}`);
+  // iPad Serial is 100200300 And Size Is 12.9
+  
+  console.log(`${TabletTwo.fullDetails()}`);
+  // Nokia Serial is 350450650 And Size Is 10.5
+  
+  console.log(`${TabletThree.fullDetails()}`);
+  // LG Serial is 250450650 And Size Is Unknown
+
+
+  // 3
+  class User {
+    #c;
+    constructor(username, card) {
+      this.u = username;
+      this.#c = card;
+    }
+    
+    getCard() {
+      return this.#c;
+    }
+
+    showData() {
+      return `Hello ${this.u} Your Credit Card Number Is ${this.#c.toString().replace(/(\d{4})(?=\d)/g, "$1-")}`;
+    }
+  }
+
+  // Do Not Edit Anything Below
+
+  let userOne = new User("Osama", "1234-5678-1234-5678");
+  let userTwo = new User("Ahmed", "1234567812345678");
+  let userThree = new User("Ghareeb", 1234567812345677);
+
+  console.log(userOne.showData());
+  // Hello Osama Your Credit Card Number Is 1234-5678-1234-5678
+
+  console.log(userTwo.showData());
+  // Hello Ahmed Your Credit Card Number Is 1234-5678-1234-5678
+
+  console.log(userThree.showData());
+  // Hello Ghareeb Your Credit Card Number Is 1234-5678-1234-5678
+
+  console.log(userOne.c); // Prevent Accessing To Card Property Here
+  // Undefined
+</script>
+</body>
+</html>
