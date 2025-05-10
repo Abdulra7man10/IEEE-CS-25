@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #184154, #1fa4b6);
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.timer {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 32px 48px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.3);
+}
+h1 {
+  margin-bottom: 24px;
+  font-size: 40px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 24px;
+}
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.value {
+  font-size: 35px;
+  font-weight: bold;
+}
+.label {
+  margin-top: 3px;
+  font-size: 16px;
+}
