@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2</title>
+</head>
+<body>
+
+<script>
+  let req = new XMLHttpRequest();
+  req.open("GET", "articles_1.json", true);
+
+  req.onload = function() {
+    if (req.status === 200 && req.readyState === 4) {
+      let data = JSON.parse(req.responseText);
+      
+      if (data && data.articles) {
+        console.log(data);
+        console.log("Data Loaded");
+      } 
+      else
+        console.error("No articles found in the response.");
+    }
+  };
+
+  req.send();
+</script>
+
+</body>
+</html>

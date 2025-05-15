@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A3 & 4</title>
+</head>
+<body>
+
+<script>
+  let req = new XMLHttpRequest();
+  req.open("GET", "articles_1.json", true);
+  req.send();
+
+  req.onload = function () {
+    if (req.status === 200 && req.readyState === 4) {
+
+      let mainData = JSON.parse(req.responseText);
+
+      mainData.articles.forEach(article => {
+        article.category = "All";
+      });
+
+      console.log("mainData Variable Content");
+      console.log(mainData);
+
+      let updatedData = JSON.stringify(mainData);
+      console.log("UpdatedData Variable Content");
+      console.log(updatedData);
+
+      let data = document.createElement("div");
+      data.setAttribute("id", "data");
+      for (let i = 0; i < mainData.articles.length; i++) {
+        let div = document.createElement("div");
+
+        let title = document.createElement("h2");
+        title.innerText = mainData.articles[i].title;
+        
+        let content = document.createElement("p");
+        content.innerText = mainData.articles[i].content;
+        
+        let author = document.createElement("p");
+        author.innerText = "Author: " + mainData.articles[i].author;
+        
+        let category = document.createElement("p");
+        category.innerText = "Category: " + mainData.articles[i].category;
+
+        div.appendChild(title);
+        div.appendChild(content);
+        div.appendChild(author);
+        div.appendChild(category);
+        
+        data.appendChild(div);
+      }
+      document.body.appendChild(data);
+    }
+  };
+</script>
+
+</body>
+</html>
