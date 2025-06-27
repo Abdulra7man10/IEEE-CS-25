@@ -1,0 +1,7 @@
+[
+  { "userId": 10, "title": "Article Title Number 1", "description": "Article Description Number 1" },
+  { "userId": 5, "title": "Article Title Number 2", "description": "Article Description Number 2" },
+  { "userId": 5, "title": "Article Title Number 3", "description": "Article Description Number 3" },
+  { "userId": 5, "title": "Article Title Number 4", "description": "Article Description Number 4" },
+  { "userId": 5, "title": "Article Title Number 5", "description": "Article Description Number 5" }
+]
