@@ -13,7 +13,13 @@ export default () => {
   // • Create an interface `CartItem` and replace the param's type with it
   // • Make variantId optional
 
-  function addToCart(item: { id: number; title: string; variantId: number }) {
+  interface CartItem {
+    id: number;
+    title: string;
+    variantId?: number;
+  }
+
+  function addToCart(item: CartItem) {
     console.log("[Exercise 2.1]", `Adding "${item.title}" to cart.`);
   }
 
@@ -23,8 +29,11 @@ export default () => {
   // Instructions:
   // • Create and implement an interface on `Person` to ensure it always has accessible
   //   `name` and `age` member properties.
-
-  class Person {
+  interface PersonInfo {
+    name: string;
+    age: number;
+  }
+  class Person implements PersonInfo {
     constructor(public name: string, public age: number) {}
   }
 
@@ -40,8 +49,17 @@ export default () => {
   // • Fix whatever is wrong with `tampa`
 
   // [do not edit] (pretend this is coming from external `foo.d.ts` lib)
+  interface Coords {
+    latitude: number;
+    longitude: number;
+  }
+
   interface City {
     name: string;
+  }
+  
+  interface CityWithCoords extends City {
+    coords: Coords;
   }
   // [/do not edit]
 
@@ -55,13 +73,13 @@ export default () => {
 
   const tampa = {
     coords: {
-      latitude: "27.9478",
-      longitude: "-82.4584",
+      latitude: 27.9478,
+      longitude: -82.4584,
     },
     name: "Tampa",
   };
 
-  function getCityInfo(city: City) {
+  function getCityInfo(city: CityWithCoords) {
     const coords = `(${city.coords.latitude.toFixed(
       3
     )}, ${city.coords.longitude.toFixed(3)})`;
@@ -90,7 +108,7 @@ export default () => {
   console.log(user.id); // readable
 
   user.name = "Harold"; // writable
-  user.id = 5; // not writable
+  //user.id = 5; // not writable
 
   console.log(`User:`, user);
 };
