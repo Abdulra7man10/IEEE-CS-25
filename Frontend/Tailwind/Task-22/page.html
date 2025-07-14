@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white font-sans w-screen min-h-screen">
+    <!-- Main Section -->
+    <div class="flex flex-col lg:flex-row items-center justify-between px-8 py-10 w-full">
+      
+      <!-- Text Content -->
+      <div class="w-full lg:w-1/2 space-y-6">
+        <h1 class="text-4xl font-bold leading-tight">
+          Bring <span class="text-green-700">GREEN</span> to your home and<br />
+          make you feel <span class="text-green-700">BETTER</span>
+        </h1>
+        <p class="text-gray-600 max-w-md">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus imperdiet sed id elementum. Quam vel aliquam sit.
+        </p>
+
+        <!-- Stats -->
+        <div class="flex space-x-8 pt-4">
+          <div>
+            <h2 class="text-xl font-bold">124K+</h2>
+            <p class="text-sm text-gray-500">Lorem ipsum consectetur</p>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold">126</h2>
+            <p class="text-sm text-gray-500">Lorem ipsum consectetur</p>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold">78K</h2>
+            <p class="text-sm text-gray-500">Lorem ipsum consectetur</p>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <button class="mt-6 bg-green-700 text-white px-6 py-3 rounded-full font-medium hover:bg-green-800">
+          Find your plant
+        </button>
+      </div>
+
+      <!-- Plant Image -->
+      <div class="w-full lg:w-1/2 flex justify-center mt-10 lg:mt-0 relative">
+        <img src="media/plant.png" alt="Potted Plants" class="w-[90%] lg:w-[80%]" />
+        <!-- Circular Badge -->
+        <div class="absolute -top-4 -right-4 border border-gray-400 rounded-full w-24 h-24 flex flex-col items-center justify-center text-[10px] text-center text-gray-700 leading-tight p-2">
+          <div class="rotate-[20deg]">
+            consectetur<br />dolor sit amet<br />
+            <span class="text-lg text-black">&#x2665;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-8 py-10 w-full">
+      <div class="flex items-start space-x-4 p-4 border rounded-lg">
+        <img src="media/p1.jpg" alt="plant" class="w-12 h-12" />
+        <p class="text-sm text-gray-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus
+        </p>
+      </div>
+      <div class="flex items-start space-x-4 p-4 border rounded-lg">
+        <img src="media/p2.jpg" alt="plant" class="w-12 h-12" />
+        <p class="text-sm text-gray-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus
+        </p>
+      </div>
+      <div class="flex items-start space-x-4 p-4 border rounded-lg">
+        <img src="media/p3.jpg" alt="plant" class="w-12 h-12" />
+        <p class="text-sm text-gray-600">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
